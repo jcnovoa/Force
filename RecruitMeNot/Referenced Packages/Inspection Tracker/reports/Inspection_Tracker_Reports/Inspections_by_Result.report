@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>Inspection__c$Meets_inspection_criteria__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>true</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Inspection results</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Inspection__c$Name</field>
+    </columns>
+    <columns>
+        <field>Inspection__c$Inspection_Type__c</field>
+    </columns>
+    <columns>
+        <field>Inspection__c$RecordType</field>
+    </columns>
+    <columns>
+        <field>Inspection__c$Inspection_Media__c</field>
+    </columns>
+    <columns>
+        <field>Inspection__c$Inspection_Date__c</field>
+    </columns>
+    <columns>
+        <field>Inspection__c$Inspector__c</field>
+    </columns>
+    <description>Show good and rejected inspection results.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Inspection__c$Meets_inspection_criteria__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Inspections by Result</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Inspection_Report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Inspection__c$Inspection_Date__c</dateColumn>
+        <interval>INTERVAL_PREV2FY</interval>
+    </timeFrameFilter>
+</Report>

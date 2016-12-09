@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Update next inspection date, everytime the asset is inspected or the interval has changed</description>
+    <label>Update next inspection date</label>
+    <processType>Workflow</processType>
+</Flow>

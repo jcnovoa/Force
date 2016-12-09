@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Inspections Reports</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>All_assets_inspected__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>All assets are inspected</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Asset2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Asset</label>
+        <referenceTo>Product__c</referenceTo>
+        <relationshipLabel>Inspections</relationshipLabel>
+        <relationshipName>Inspections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Asset_group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Asset group</label>
+        <referenceTo>Test_Facility__c</referenceTo>
+        <relationshipLabel>Inspections</relationshipLabel>
+        <relationshipName>Inspections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Hardness_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hardness Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspection Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Inspection_Media__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspection Media</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_Pressure__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Inspection Pressure (Bar)</inlineHelpText>
+        <label>Inspection Pressure</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_Report__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspection Report</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Inspection_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspection Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>First inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Re-inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Repair inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change inspection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Inspector__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspector</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Inspections</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Leak_Media__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Leak Media</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leak_test__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Leak test pressure (Bar)</inlineHelpText>
+        <label>Leak test pressure</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Meets_inspection_criteria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Asset(s) meet(s) the inspection criteria.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Do(es) the asset(s) meet(s) the inspection criteria?</inlineHelpText>
+        <label>Asset(s) meet(s) inspection criteria</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Messure_Control_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Non-Destructive Massure Control Inspection</description>
+        <externalId>false</externalId>
+        <label>Messure Control Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Penetrant_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Non-Destructive Penetrant Inspection</description>
+        <externalId>false</externalId>
+        <label>Penetrant Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Repairs__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description of the required repairs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the required repairs.</inlineHelpText>
+        <label>Repairs</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Rontgen_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rontgen Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Utrasonic_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Utrasonic Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Visual_Inspection__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Non-Destructive Visual Inspection</description>
+        <externalId>false</externalId>
+        <label>Visual Inspection</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Inspection</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Inspection_Type__c</columns>
+        <columns>Inspector__c</columns>
+        <columns>Inspection_Date__c</columns>
+        <columns>Meets_inspection_criteria__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>IR-{0000}</displayFormat>
+        <label>Inspection Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Inspections</pluralLabel>
+    <recordTypes>
+        <fullName>General_Inspection</fullName>
+        <active>true</active>
+        <description>General Asset Inspection Report</description>
+        <label>General Inspection</label>
+        <picklistValues>
+            <picklist>Inspection_Type__c</picklist>
+            <values>
+                <fullName>Change inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair inspection</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Group_Inspection</fullName>
+        <active>true</active>
+        <description>Group Asset Inspection Report</description>
+        <label>Group Inspection</label>
+        <picklistValues>
+            <picklist>Inspection_Type__c</picklist>
+            <values>
+                <fullName>Change inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-inspection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Repair inspection</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Inspection_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Inspection_Type__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Inspection_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Inspection_Report__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Inspection_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Inspector__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Inspection_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Inspection_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Inspector__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>OBJECT_ID</searchFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Inspection_Date__c</searchFilterFields>
+        <searchFilterFields>Inspection_Pressure__c</searchFilterFields>
+        <searchFilterFields>Inspection_Type__c</searchFilterFields>
+        <searchFilterFields>Inspector__c</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Inspection_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Inspection_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Inspector__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

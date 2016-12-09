@@ -1,0 +1,62 @@
+<apex:page standardStylesheets="false" standardController="KTV__Locations__c" recordSetVar="records" showHeader="false" renderAs="pdf"  >
+<apex:stylesheet value="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/xr_main.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/xr_text.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/custom_styles.css')}"/>
+<html>
+<head>
+      <style>
+        @page {
+            size: 190mm 105mm;
+            margin: 1px;
+        } 
+        .page-break {
+            page-break-after:auto;
+        }     
+
+    </style>
+</head>
+<body >
+<apex:repeat value="{!selected}" var="lctns" >
+       <div class="page-break">
+                    <div class="xr_ap" id="xr_xr" style="width: 450px; height: 300px; top:20px; left:50%; margin-left: -225px;">
+                     
+                     <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/1.png')}" alt="" title="" style="left: -4px; top: -4px; width: 468px; height: 318px;"/>
+                    <!--[if IE]><div class="xr_ap" id="xr_xri" style="width: 450px; height: 300px; clip: rect(0px 450px 300px 0px);"><![endif]-->
+                    <!--[if !IE]>--><div class="xr_ap" id="xr_xri" style="width: 450px; height: 300px; clip: rect(0px, 450px, 300px, 0px);"><!--<![endif]-->
+                     <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/11.png')}" alt="YOUR HEADING TEXT" id="LiveCopy-58HeadingText1-46MouseOff" title="" style="left: 200px; top: 68px; width: 239px; height: 16px;"/>
+                     <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/3.png')}" alt="" title="" style="left: -1px; top: 0px; width: 452px; height: 89px;"/>
+                     <a href="http://www.xara.com/products/webdesigner/" onclick="return(xr_nn());">
+                      <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/16.png')}" alt="Chemin Location" id="LiveCopy-58Beta2-58Heading-46MouseOff" title="" onmousemove="xr_mo(this,0,event)" style="left: 20px; top: 15px; width: 331px; height: 70px;"/>
+                     </a>
+                     <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/17.png')}" alt="" id="LiveCopy-58BetaFooter1-46MouseOff" title="" style="left: 0px; top: 285px; width: 450px; height: 21px;"/>
+                     <div class="xr_s0" style="position: absolute; left:13px; top:297px;">
+                      <span class="xr_tc xr_s0" style="left: 63px; top: -9px; width: 300px;"><span class="xr_s1" style=""> <apex:outputText value="  {!$Organization.Name}, {!$Organization.Street}, Phone:+{!$Organization.Phone}"/></span></span>
+                     </div>
+                     <div class="Heading_3" style="position: absolute; left:17px; top:112px;color:#FF8200;">
+                      <h3 class="xr_tl Heading_3" style="top: -14px;color:#FF8200;margin:0;"><span id="Panel_Text2"></span><apex:outputText value="{!lctns.Name}"/> </h3>
+
+                      <span class="xr_tl Normal_text" style="top: 11px;"><span class="Normal_text" style="font-family:'Arial';font-weight:bold;">Room supervisor:</span></span>
+                      <span class="xr_tl Normal_text" style="left: 113px; top: 11px;"><apex:outputText value="{!lctns.Room_supervisor__r.name}"/>  </span>
+                      <span class="xr_tl Normal_text" style="left: 302px; top: 11px;">t: <apex:outputText value="{!lctns.Room_supervisor__r.phone}"/> </span>
+                      <span class="xr_tl Normal_text" style="top: 27px;"><span class="Normal_text" style="font-family:'Arial';font-weight:bold;">Backup contact:</span></span>
+                      <span class="xr_tl Normal_text" style="left: 113px; top: 27px;"><apex:outputText value="{!lctns.Room_supervisor__r.Manager.name}" />  </span>
+                      <span class="xr_tl Normal_text" style="left: 302px; top: 27px;">t: <apex:outputText value="{!lctns.Room_supervisor__r.Manager.phone}" /></span>
+                      <span class="xr_tl Normal_text" style="top: 81px;"><span class="Normal_text" style="font-family:'Arial';font-weight:bold;">Room provisions:</span></span>
+                      <span class="xr_tl Normal_text" style="left: 113px; top: 43px;"><apex:image styleClass="xr_an_1_130_155" alt="" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/0.gif')}" style="height:48px;width:145px;"/></span>
+                     </div>
+                     <apex:OutputText styleClass="xr_ap" value="{!lctns.KTV__Room_provision_Icon__c}"  escape="false" style="left: 130px; top: 155px; width: 245px; height: 48px;"/>                     
+       
+                     <apex:image styleClass="xr_ap" url="{!URLFOR($Resource.KTV__LocationSticker, 'LocationSticker_htm_files/8.png')}" alt="" title="" style="left: 3px; top: 220px; width: 123px; height: 52px;"/>
+                     <apex:OutputText styleClass="xr_ap" value="{!lctns.KTV__QR_code__c}"              escape="false" style="left: 321px; top: 163px; width: 80px; height: 80px;"/>       
+                     <div id="xr_xo0" class="xr_ap" style="left:0; top:0; width:450px; height:100px; visibility:hidden;">
+                     <a href="" onclick="return(false);">
+                     </a>
+                     </div>
+                    
+                    </div>
+                    </div>
+            </div>
+        </apex:repeat>      
+</body>
+</html>
+</apex:page>

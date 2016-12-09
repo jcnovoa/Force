@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Locations where packings can be stored</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Locatie_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Locatie ID</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>QR_code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>QR Code of this location</description>
+        <externalId>false</externalId>
+        <formula>IMAGE(&quot;https://chart.googleapis.com/chart?cht=qr&amp;chs=120x120&amp;chld=L&amp;choe=UTF-8&amp;chl=&quot; + LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260)) + Id,
+ &quot;QR Code&quot;, 120, 120)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>QR-code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Room_provision_Icon__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( INCLUDES(Room_provisions__c , &quot;Laboratory&quot;),   IMAGE(&quot;/resource/assets/images/location/KTV__Lab.png&quot;, &quot;Lab&quot;, 60,60) + &quot; &quot;,&quot;&quot;)+
+IF( INCLUDES(Room_provisions__c , &quot;Fume cabinet&quot;), IMAGE(&quot;/resource/assets/images/location/KTV__Fumecab.png&quot;, &quot;Fumecab&quot;, 60,60) + &quot; &quot;,&quot;&quot;)+
+IF( INCLUDES(Room_provisions__c , &quot;HF Room&quot;),      IMAGE(&quot;/resource/assets/images/location/KTV__HF.png&quot;, &quot;HF&quot;, 60,60) + &quot; &quot;,&quot;&quot;)+
+IF( INCLUDES(Room_provisions__c , &quot;HG Room&quot;),      IMAGE(&quot;/resource/assets/images/location/KTV__HG.png&quot;, &quot;HG&quot;, 60,60) + &quot; &quot;,&quot;&quot;)+
+IF( INCLUDES(Room_provisions__c , &quot;Shower&quot;),       IMAGE(&quot;/resource/assets/images/location/KTV__Shower.png&quot;, &quot;Shower&quot;, 60,60) + &quot; &quot;,&quot;&quot;)+
+IF( INCLUDES(Room_provisions__c , &quot;Eye shower&quot;),   IMAGE(&quot;/resource/assets/images/location/KTV__Eyeshower.png&quot;, &quot;Eyeshower&quot;, 60,60) + &quot; &quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Room provisions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Room_provisions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Available room provisions on this location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Available room provisions on this location.</inlineHelpText>
+        <label>Room provisions txt</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Laboratory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fume cabinet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hg Room</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HF Room</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shower</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Eye shower</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Room_supervisor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Room supervisor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Locaties1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Location</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Room_provision_Icon__c</columns>
+        <columns>Room_supervisor__c</columns>
+        <columns>QR_code__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_locations</fullName>
+        <columns>NAME</columns>
+        <columns>Room_provision_Icon__c</columns>
+        <columns>Room_supervisor__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My locations</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Location name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Locations</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Uitgebreide_locatie</fullName>
+        <active>true</active>
+        <label>Uitgebreide locatie</label>
+        <picklistValues>
+            <picklist>Room_provisions__c</picklist>
+            <values>
+                <fullName>Eye shower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fume cabinet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HF Room</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hg Room</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Laboratory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shower</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Room_provision_Icon__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Room_supervisor__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Location_Label</listViewButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Location_Label</fullName>
+        <availability>online</availability>
+        <description>Print location label</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Print Location Label</masterLabel>
+        <openType>sidebar</openType>
+        <page>LocationLabel</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

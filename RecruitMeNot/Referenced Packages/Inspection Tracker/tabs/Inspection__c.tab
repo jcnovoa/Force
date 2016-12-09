@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>Asset Inspection Reports</description>
+    <icon>Documentatie_Folder/Asset_Inspection.png</icon>
+    <mobileReady>false</mobileReady>
+    <motif>Custom290: TV Widescreen</motif>
+</CustomTab>

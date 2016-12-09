@@ -1,0 +1,19 @@
+<apex:page >
+    <script type="text/javascript" src="/canvas/sdk/js/30.0/controller.js"></script>
+    
+    <apex:canvasApp applicationName="TotangoApp" height="950px" width="100%" scrolling="yes" />
+    
+    <script type="text/javascript">
+        var height = (window.innerHeight - 195);
+        if (height < 590) {
+            height = 590;
+        }
+        height = height + 'px';
+
+        window.addEventListener('load', function() {
+            window.setTimeout(function() {
+                Sfdc.canvas.controller.resize({ height: height });
+            }, 500);
+        });
+    </script>
+</apex:page>

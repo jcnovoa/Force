@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings used by Chemin. Use the manage button to customize the settings.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Icon_size__c</fullName>
+        <defaultValue>55</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Icon size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_message__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Inspection message with instructions that will be presented to the user when a package is inspected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>You must take meassures with the chemical/packing, such as rebottle or dispose of, under the following circumstances stated in this field.</inlineHelpText>
+        <label>Inspection message</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Inspection_term_high_days__c</fullName>
+        <defaultValue>31</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Number of days before a packing will expire that has an inspection frequency &apos;High&apos;</description>
+        <externalId>false</externalId>
+        <label>Inspection term high (days)</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_term_low__c</fullName>
+        <defaultValue>365</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inspection term low (days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inspection_term_medium_days__c</fullName>
+        <defaultValue>180</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Specification of the number of days for an inspection frequency Medium</description>
+        <externalId>false</externalId>
+        <label>Inspection term medium (days)</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_days_Allmost_Overdue__c</fullName>
+        <defaultValue>20</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Number of days a packing can will have the status Almost overdue.</description>
+        <externalId>false</externalId>
+        <label>Number of days Allmost Overdue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_warning_days__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number of warning days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Inspection Tracker Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>
