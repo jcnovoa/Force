@@ -1,5 +1,5 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
-	<aura:attribute name="candidates" type="String[]" default="['Juan Carlos','Jeff','Saira', 'Jessica']" />
+	<aura:attribute name="candidates" type="String[]" default="['Juan Carlos Novoa','Jeff','Saira Kaizad', 'Jessica']" />
     <div>
     	<aura:iteration items="{!v.candidates}" var="candidate" >
         	<ui:outputText value="{!candidate}" /></br>
