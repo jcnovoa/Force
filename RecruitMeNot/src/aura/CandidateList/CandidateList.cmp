@@ -2,7 +2,7 @@
 	<aura:attribute name="candidates" type="String[]" default="['Juan Carlos Novoa','Jeff','Saira Kaizad', 'Jessica']" />
     <div>
     	<aura:iteration items="{!v.candidates}" var="candidate" >
-        	<ui:outputText value="{!candidate}" />
+            <ui:outputText value="{!candidate}" /><br></br>
         </aura:iteration>
     </div>
 </aura:component>
